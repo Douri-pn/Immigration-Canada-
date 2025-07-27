@@ -12,31 +12,23 @@
       max-width: 700px;
       margin: auto;
       color: #333;
-      position: relative;
     }
     header {
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
-      margin-bottom: 20px;
+      gap: 20px;
+      margin-bottom: 25px;
     }
-    header img.logo {
-      position: absolute;
-      right: 0;
-      top: 0;
+    header img {
       height: 50px;
+      width: auto;
     }
     header h1 {
       color: #d62828;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 24px;
       margin: 0;
-    }
-    header h1 img {
-      height: 32px;
+      font-size: 28px;
+      font-weight: bold;
     }
     label {
       display: block;
@@ -77,17 +69,13 @@
   </style>
 </head>
 <body>
-
   <header>
-    <h1>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Canada.svg" alt="Drapeau Canada" />
-      CIC Immigration Canada
-    </h1>
-    <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Immigration_Canada_Logo.svg" alt="Logo CIC" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Canada.svg" alt="Drapeau du Canada" />
+    <h1>CIC Immigration Canada</h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Coat_of_arms_of_Canada.svg" alt="Logo CIC" />
   </header>
 
   <form id="inscriptionForm" action="https://formspree.io/f/xwpqozag" method="POST">
-    <!-- ton formulaire complet ici, même que tu as déjà -->
     <label>Nom</label>
     <input type="text" name="nom" required />
 
@@ -164,12 +152,14 @@
 
     <label>Êtes-vous prêt à payer les frais d'inscription (290$) ?</label>
     <select name="paiement_pret" required>
+      <option value="">--Sélectionnez--</option>
       <option value="Oui">Oui</option>
       <option value="Non">Non</option>
     </select>
 
     <label>Méthode de paiement choisie</label>
     <select name="paiement">
+      <option value="">--Choisissez une méthode--</option>
       <option value="Western Union">Western Union</option>
       <option value="MoneyGram">MoneyGram</option>
       <option value="Orange Money">Orange Money</option>
@@ -181,7 +171,7 @@
     <input type="text" name="recu" />
 
     <label>
-      <input type="checkbox" name="conditions" required />
+      <input type="checkbox" name="conditions" required />  
       J'accepte les conditions générales
     </label>
 
