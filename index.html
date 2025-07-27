@@ -12,10 +12,31 @@
       max-width: 700px;
       margin: auto;
       color: #333;
+      position: relative;
     }
-    h1 {
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-bottom: 20px;
+    }
+    header img.logo {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 50px;
+    }
+    header h1 {
       color: #d62828;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 24px;
+      margin: 0;
+    }
+    header h1 img {
+      height: 32px;
     }
     label {
       display: block;
@@ -56,9 +77,17 @@
   </style>
 </head>
 <body>
-  <h1>Formulaire d'inscription CIC Immigration Canada</h1>
+
+  <header>
+    <h1>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Canada.svg" alt="Drapeau Canada" />
+      CIC Immigration Canada
+    </h1>
+    <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Immigration_Canada_Logo.svg" alt="Logo CIC" />
+  </header>
 
   <form id="inscriptionForm" action="https://formspree.io/f/xwpqozag" method="POST">
+    <!-- ton formulaire complet ici, même que tu as déjà -->
     <label>Nom</label>
     <input type="text" name="nom" required />
 
@@ -152,7 +181,7 @@
     <input type="text" name="recu" />
 
     <label>
-      <input type="checkbox" name="conditions" required />  
+      <input type="checkbox" name="conditions" required />
       J'accepte les conditions générales
     </label>
 
@@ -195,4 +224,4 @@
     });
   </script>
 </body>
-  </html>
+      </html>
