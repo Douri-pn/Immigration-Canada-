@@ -1,184 +1,238 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CIC Immigration Canada - Inscription</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f6fa;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 700px;
-      margin: 40px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.1);
-    }
-    h1 {
-      text-align: center;
-      color: #2c3e50;
-    }
-    .instructions {
-      background: #ecf0f1;
-      padding: 15px;
-      border-radius: 6px;
-      margin-bottom: 20px;
-      font-size: 14px;
-    }
-    label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
-      color: #2c3e50;
-    }
-    input, select {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 14px;
-    }
-    .checkbox-group {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-top: 10px;
-    }
-    button {
-      margin-top: 20px;
-      width: 100%;
-      padding: 12px;
-      border: none;
-      border-radius: 6px;
-      background: #3498db;
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    button:hover {
-      background: #2980b9;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CIC Immigration Canada - Inscription</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  header {
+    background: #d62828; /* Rouge Canada */
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+  }
+  header img.flag {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 60px;
+    height: auto;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .whatsapp-contact {
+    margin-top: 10px;
+    font-size: 1.1rem;
+  }
+  .whatsapp-contact span {
+    color: #fff;
+    font-weight: bold;
+  }
+  .container {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  }
+  .instructions {
+    position: relative;
+    padding-left: 80px;
+    background: #fff4f4;
+    border-left: 6px solid #d62828;
+    margin-bottom: 25px;
+    font-size: 14px;
+  }
+  .instructions img.flag-left {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 40px;
+    height: auto;
+  }
+  .instructions img.logo-right {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 60px;
+    height: auto;
+  }
+  .instructions ul li.important {
+    color: #d62828;
+    font-weight: bold;
+  }
+  form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  form input, form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+  }
+  .checkbox-group {
+    margin-top: 10px;
+  }
+  .checkbox-group label {
+    margin-right: 15px;
+    font-weight: normal;
+  }
+  button {
+    margin-top: 25px;
+    width: 100%;
+    background: #d62828;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  button:hover {
+    background: #b02323;
+  }
+</style>
 </head>
 <body>
-  <div class="container">
-    <h1>Formulaire d'Inscription</h1>
-    <div class="instructions">
-      <p><strong>Instructions avant l’inscription :</strong></p>
-      <ul>
-        <li>Si vous n’avez pas de passeport, l’organisation peut vous délivrer gratuitement un bordereau de passeport canadien après votre inscription.</li>
-        <li>Les frais d’inscription s’élèvent à <strong>290 $</strong> et doivent être réglés dans un délai maximum de <strong>72 heures</strong>.</li>
-        <li>Contactez la direction via <strong>WhatsApp</strong> pour recevoir les coordonnées de paiement avant de débuter la procédure.</li>
-        <li><strong>Si vous n’êtes pas prêt à payer ces frais, veuillez ne pas soumettre votre dossier.</strong></li>
-      </ul>
+
+<header>
+  <img src="https://upload.wikimedia.org/wikipedia/en/c/cf/Flag_of_Canada.svg" alt="Drapeau du Canada" class="flag" />
+  <h1>CIC Immigration Canada</h1>
+  <div class="whatsapp-contact">
+    Contact WhatsApp : <span>+1 (571) 376-0820</span>
+  </div>
+</header>
+
+<div class="container">
+  <div class="instructions">
+    <img src="https://upload.wikimedia.org/wikipedia/en/c/cf/Flag_of_Canada.svg" alt="Drapeau du Canada" class="flag-left" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Immigration_Canada_Logo.svg/120px-Immigration_Canada_Logo.svg.png" alt="Logo CIC" class="logo-right" />
+    <p><strong>Instructions importantes avant l’inscription :</strong></p>
+    <ul>
+      <li>Si vous ne possédez pas de passeport, notre organisation peut vous délivrer gratuitement un bordereau de passeport canadien après votre inscription.</li>
+      <li>Les frais d’inscription sont de <strong>290 $</strong> et doivent être réglés dans un délai de <strong>72 heures</strong> maximum.</li>
+      <li>Veuillez contacter la direction via WhatsApp au <span style="color:#d62828; font-weight:bold;">+1 (571) 376-0820</span> pour obtenir les coordonnées de paiement avant de commencer la procédure.</li>
+      <li class="important">Après l'inscription, vous allez passer au paiement des frais d'inscription.</li>
+    </ul>
+  </div>
+
+  <form action="https://formspree.io/f/xwpqozag" method="POST">
+    <label for="nom">Nom :</label>
+    <input type="text" id="nom" name="nom" required />
+
+    <label for="prenom">Prénom :</label>
+    <input type="text" id="prenom" name="prenom" required />
+
+    <label for="date_naissance">Date de naissance :</label>
+    <input type="date" id="date_naissance" name="date_naissance" required />
+
+    <label for="nationalite">Nationalité :</label>
+    <input type="text" id="nationalite" name="nationalite" required />
+
+    <label for="sexe">Sexe (optionnel) :</label>
+    <select id="sexe" name="sexe">
+      <option value="">-- Choisir --</option>
+      <option value="Homme">Homme</option>
+      <option value="Femme">Femme</option>
+      <option value="Autre">Autre</option>
+    </select>
+
+    <label for="adresse">Adresse complète :</label>
+    <input type="text" id="adresse" name="adresse" required />
+
+    <label for="pays_actuel">Pays actuel :</label>
+    <input type="text" id="pays_actuel" name="pays_actuel" required />
+
+    <label for="telephone">Numéro de téléphone :</label>
+    <input type="tel" id="telephone" name="telephone" required />
+
+    <label for="email">Adresse email :</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="situation">Situation familiale :</label>
+    <select id="situation" name="situation">
+      <option value="">-- Choisir --</option>
+      <option value="Célibataire">Célibataire</option>
+      <option value="Marié">Marié</option>
+      <option value="Divorcé">Divorcé</option>
+      <option value="Veuf">Veuf</option>
+    </select>
+
+    <label for="etudes">Niveau d'études :</label>
+    <select id="etudes" name="etudes">
+      <option value="">-- Choisir --</option>
+      <option value="Primaire">Primaire</option>
+      <option value="Secondaire">Secondaire</option>
+      <option value="Universitaire">Universitaire</option>
+    </select>
+
+    <label for="profession">Profession actuelle :</label>
+    <input type="text" id="profession" name="profession" />
+
+    <label for="langues">Langues parlées :</label>
+    <input type="text" id="langues" name="langues" />
+
+    <label>Passeport :</label>
+    <div class="checkbox-group">
+      <label><input type="radio" name="passeport" value="Oui" /> Oui</label>
+      <label><input type="radio" name="passeport" value="Non" /> Non</label>
     </div>
 
-    <form action="https://formspree.io/f/xwpqozag" method="POST">
-      <label for="nom">Nom :</label>
-      <input type="text" id="nom" name="nom" required />
+    <label for="numero_passeport">Numéro de passeport (si vous en avez un) :</label>
+    <input type="text" id="numero_passeport" name="numero_passeport" />
 
-      <label for="prenom">Prénom :</label>
-      <input type="text" id="prenom" name="prenom" required />
+    <label>Avez-vous déjà voyagé en Europe ?</label>
+    <div class="checkbox-group">
+      <label><input type="radio" name="voyage_europe" value="Oui" /> Oui</label>
+      <label><input type="radio" name="voyage_europe" value="Non" /> Non</label>
+    </div>
 
-      <label for="date_naissance">Date de naissance :</label>
-      <input type="date" id="date_naissance" name="date_naissance" required />
+    <label>Avez-vous déjà fait une demande d’immigration ?</label>
+    <div class="checkbox-group">
+      <label><input type="radio" name="demande_immigration" value="Oui" /> Oui</label>
+      <label><input type="radio" name="demande_immigration" value="Non" /> Non</label>
+    </div>
 
-      <label for="nationalite">Nationalité :</label>
-      <input type="text" id="nationalite" name="nationalite" required />
+    <label>Prêt pour payer les frais d'inscription ?</label>
+    <div class="checkbox-group">
+      <label><input type="radio" name="pret_payer" value="Oui" required /> Oui</label>
+      <label><input type="radio" name="pret_payer" value="Non" /> Non</label>
+    </div>
 
-      <label for="sexe">Sexe (optionnel) :</label>
-      <select id="sexe" name="sexe">
-        <option value="">-- Choisir --</option>
-        <option value="Homme">Homme</option>
-        <option value="Femme">Femme</option>
-        <option value="Autre">Autre</option>
-      </select>
+    <label for="paiement">Méthode de paiement :</label>
+    <select id="paiement" name="paiement" required>
+      <option value="">-- Choisir --</option>
+      <option value="Western Union">Western Union</option>
+      <option value="MoneyGram">MoneyGram</option>
+      <option value="Orange Money">Orange Money</option>
+      <option value="Wave">Wave</option>
+      <option value="Autre">Autre</option>
+    </select>
 
-      <label for="adresse">Adresse complète :</label>
-      <input type="text" id="adresse" name="adresse" required />
+    <div class="checkbox-group" style="margin-top: 20px;">
+      <label><input type="checkbox" name="accept_conditions" required /> J’accepte les conditions générales</label>
+    </div>
 
-      <label for="pays_actuel">Pays actuel :</label>
-      <input type="text" id="pays_actuel" name="pays_actuel" required />
+    <button type="submit">Envoyer l'inscription</button>
+  </form>
+</div>
 
-      <label for="telephone">Numéro de téléphone :</label>
-      <input type="tel" id="telephone" name="telephone" required />
-
-      <label for="email">Adresse email :</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="situation">Situation familiale :</label>
-      <select id="situation" name="situation">
-        <option value="">-- Choisir --</option>
-        <option value="Célibataire">Célibataire</option>
-        <option value="Marié">Marié</option>
-        <option value="Divorcé">Divorcé</option>
-        <option value="Veuf">Veuf</option>
-      </select>
-
-      <label for="etudes">Niveau d'études :</label>
-      <select id="etudes" name="etudes">
-        <option value="">-- Choisir --</option>
-        <option value="Primaire">Primaire</option>
-        <option value="Secondaire">Secondaire</option>
-        <option value="Universitaire">Universitaire</option>
-      </select>
-
-      <label for="profession">Profession actuelle :</label>
-      <input type="text" id="profession" name="profession" />
-
-      <label for="langues">Langues parlées :</label>
-      <input type="text" id="langues" name="langues" />
-
-      <label>Passeport :</label>
-      <div class="checkbox-group">
-        <label><input type="radio" name="passeport" value="Oui" /> Oui</label>
-        <label><input type="radio" name="passeport" value="Non" /> Non</label>
-      </div>
-
-      <label for="numero_passeport">Numéro de passeport (si vous en avez un) :</label>
-      <input type="text" id="numero_passeport" name="numero_passeport" />
-
-      <label>Avez-vous déjà voyagé en Europe ?</label>
-      <div class="checkbox-group">
-        <label><input type="radio" name="voyage_europe" value="Oui" /> Oui</label>
-        <label><input type="radio" name="voyage_europe" value="Non" /> Non</label>
-      </div>
-
-      <label>Avez-vous déjà fait une demande d’immigration ?</label>
-      <div class="checkbox-group">
-        <label><input type="radio" name="demande_immigration" value="Oui" /> Oui</label>
-        <label><input type="radio" name="demande_immigration" value="Non" /> Non</label>
-      </div>
-
-      <label>Prêt pour payer les frais d'inscription ?</label>
-      <div class="checkbox-group">
-        <label><input type="radio" name="pret_payer" value="Oui" required /> Oui</label>
-        <label><input type="radio" name="pret_payer" value="Non" /> Non</label>
-      </div>
-
-      <label for="paiement">Méthode de paiement :</label>
-      <select id="paiement" name="paiement">
-        <option value="">-- Choisir --</option>
-        <option value="Western Union">Western Union</option>
-        <option value="MoneyGram">MoneyGram</option>
-        <option value="Orange Money">Orange Money</option>
-        <option value="Wave">Wave</option>
-        <option value="Autre">Autre</option>
-      </select>
-
-      <div class="checkbox-group">
-        <label><input type="checkbox" name="accept_conditions" required /> J’accepte les conditions générales</label>
-      </div>
-
-      <button type="submit">Envoyer l'inscription</button>
-    </form>
-  </div>
 </body>
-  </html>
+      </html>
