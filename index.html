@@ -18,7 +18,7 @@
       align-items: center;
       justify-content: center;
       gap: 20px;
-      margin-bottom: 25px;
+      margin-bottom: 10px;
     }
     header img {
       height: 50px;
@@ -29,6 +29,12 @@
       margin: 0;
       font-size: 28px;
       font-weight: bold;
+    }
+    .intro {
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 25px;
+      color: #555;
     }
     label {
       display: block;
@@ -60,22 +66,13 @@
     #merciMessage {
       display: none;
       text-align: center;
-      background: #e6f0ff;
+      background: #fff5f5;
+      border: 2px solid red;
       padding: 30px;
       border-radius: 8px;
       margin-top: 40px;
-      color: #004080;
-    }
-    /* Style pour la section info en bas */
-    #infosSupplementaires {
-      margin-top: 40px;
-      background: #fff3cd;
-      border: 1px solid #ffeeba;
-      padding: 20px;
-      border-radius: 6px;
-      color: #856404;
-      font-size: 16px;
-      line-height: 1.5;
+      color: #b22222;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -86,9 +83,11 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Coat_of_arms_of_Canada.svg" alt="Logo CIC" />
   </header>
 
+  <p class="intro">
+    Veuillez remplir attentivement le formulaire ci-dessous pour soumettre votre dossier d'inscription.
+  </p>
+
   <form id="inscriptionForm" action="https://formspree.io/f/xwpqozag" method="POST">
-    <!-- Tous tes champs du formulaire ici -->
-    <!-- ... -->
     <label>Nom</label>
     <input type="text" name="nom" required />
 
@@ -191,16 +190,6 @@
     <button type="submit">Envoyer l'inscription</button>
   </form>
 
-  <div id="infosSupplementaires">
-    <h3>Informations importantes</h3>
-    <p>
-      Après l'inscription, vous devrez procéder au paiement des frais d'inscription de <strong>290 $</strong> dans un délai de 72 heures.<br/>
-      Faites une capture d'écran de la confirmation reçue après l'inscription et envoyez-la via WhatsApp au <strong>+1 (571) 376-0820</strong> pour recevoir les coordonnées de paiement.<br/>
-      Si vous n'êtes pas prêt à effectuer ce paiement, merci de ne pas soumettre votre dossier.<br/>
-      Une fois le paiement validé, la direction commencera la préparation de vos documents.
-    </p>
-  </div>
-
   <div id="merciMessage">
     <h2>Merci, votre inscription a bien été reçue !</h2>
     <p>
@@ -237,4 +226,4 @@
     });
   </script>
 </body>
-                               </html>
+        </html>
