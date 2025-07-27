@@ -4,9 +4,79 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CIC Immigration Canada - Inscription</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background-color: #f7f7f7;
+    }
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      margin-top: 20px;
+      background-color: #3498db;
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+  </style>
 </head>
 <body>
-  <h1>Bienvenue sur CIC Immigration Canada</h1>
-  <p>Le formulaire d'inscription sera bientôt disponible ici.</p>
+  <h1>CIC Immigration Canada - Inscription</h1>
+
+  <form action="https://formspree.io/f/xwpqozag" method="POST">
+    <label for="nom">Nom complet :</label>
+    <input type="text" id="nom" name="nom" required />
+
+    <label for="email">Email :</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="telephone">Téléphone :</label>
+    <input type="tel" id="telephone" name="telephone" required />
+
+    <label for="moyen_paiement">Méthode de paiement :</label>
+    <select id="moyen_paiement" name="moyen_paiement" required>
+      <option value="" disabled selected>Choisissez une option</option>
+      <option value="Western Union">Western Union</option>
+      <option value="MoneyGram">MoneyGram</option>
+      <option value="Ria">Ria</option>
+      <option value="Orange Money">Orange Money</option>
+      <option value="Wave">Wave</option>
+      <option value="Mpesa">Mpesa</option>
+    </select>
+
+    <label for="recu_paiement">Numéro ou photo du reçu de paiement :</label>
+    <input type="text" id="recu_paiement" name="recu_paiement" placeholder="Ex: numéro ou lien vers la photo" required />
+
+    <button type="submit">Envoyer l'inscription</button>
+  </form>
 </body>
 </html>
